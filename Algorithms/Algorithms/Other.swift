@@ -14,14 +14,19 @@ func binary_search (_ arr: [Int], _ k: Int) -> Int {
     var high = arr.count - 1
     while low <= high {
         let middle = (high - low) / 2 + low
-        
-        if arr[middle] == k {
-            return middle
-        }else if arr[middle] < k {
+        //如果有重复数字会找到第一个
+        if arr[middle] >= k {
+            high = middle - 1
+        }else {
             low = middle + 1
-        }else{
+        }
+        //如果有重复数字会找到最后一个
+        if arr[middle] <= k {
+            low = middle + 1
+        }else {
             high = middle - 1
         }
+        
     }
     return -1
 }

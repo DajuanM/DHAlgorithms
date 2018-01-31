@@ -7,6 +7,14 @@
 //
 
 import Foundation
+
 //print(findErrorNums([3, 2, 2]))
 print(-4 % 2)
 print(myPow(2, -4))
+
+
+print(findLUSlength("horbxeemlgqpqbujbdagizcfairalg",
+    "iwvtgyojrfhyzgyzeikqagpfjoaeen"))
+let arr = [1,2,3,4,5]
+print(twoSum(arr, 5)!)
+

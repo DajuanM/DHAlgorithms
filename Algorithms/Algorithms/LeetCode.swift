@@ -384,3 +384,50 @@ func findLUSlength(_ a: String, _ b: String) -> Int {
     }
     return tmp
 }
+
+func findErrorNums(_ nums: [Int]) -> [Int] {
+    var k = 0
+    for i in 0..<nums.count {
+        if nums[i] != i+1 {
+            k = i
+            break
+        }
+    }
+    return [nums[k], k+1]
+}
+
+//MARK: 50. Pow(x, n)
+func myPow(_ x: Double, _ n: Int) -> Double {
+    if n == 0 {
+        return 1.0
+    }
+    let half: Double = myPow(x, n / 2)
+    if n % 2 == 0 {
+        return half * half
+    }else if n > 0 {
+        return half * half * x
+    }else {
+        return half * half / x
+    }
+}
+
+//MARK: 147. Insertion Sort List
+public class ListNode {
+    public var val: Int
+    public var next: ListNode?
+    public init(_ val: Int) {
+        self.val = val
+        self.next = nil
+    }
+}
+
+func insertionSortList(_ head: ListNode?) -> ListNode? {
+    var sorted = 0
+    var p = ListNode(0)
+    p.next = head.copy()
+    while head?.next != nil {
+        
+    }
+    return nil
+}
+

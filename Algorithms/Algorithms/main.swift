@@ -7,6 +7,6 @@
 //
 
 import Foundation
-
-print(findLUSlength("horbxeemlgqpqbujbdagizcfairalg",
-    "iwvtgyojrfhyzgyzeikqagpfjoaeen"))
+//print(findErrorNums([3, 2, 2]))
+print(-4 % 2)
+print(myPow(2, -4))

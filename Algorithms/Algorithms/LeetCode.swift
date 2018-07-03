@@ -209,10 +209,10 @@ func thirdMax(_ nums: [Int]) -> Int {
 }
 
 //MARK: 给你六种面额 1、5、10、20、50、100 元的纸币，假设每种币值的数量都足够多，编写程序求组成N元（N为0~10000的非负整数）的不同组合的个数。
-func pagerMoney (_ num: Int) {
-    let money = [1, 5, 10, 20, 50, 100]
-    
-}
+//func pagerMoney (_ num: Int) {
+//    let money = [1, 5, 10, 20, 50, 100]
+//
+//}
 
 
 
@@ -245,7 +245,7 @@ func reverseWords(_ s: String) -> String {
 
 func reverseStr(_ s: String) -> String {
     var str = ""
-    for c in s.characters.reversed() {
+    for c in s.reversed() {
         str.append(c)
     }
     return str
@@ -253,7 +253,7 @@ func reverseStr(_ s: String) -> String {
 //MARK: 551. Student Attendance Record I
 func checkRecord(_ s: String) -> Bool {
     var aCount = 0
-    for (index, value) in s.characters.enumerated() {
+    for (index, value) in s.enumerated() {
         if value == "A"{
             aCount += 1
             if aCount > 1 {
@@ -261,7 +261,7 @@ func checkRecord(_ s: String) -> Bool {
             }
             
         }else {
-            if value == "L" && index > 0 && index < s.characters.count - 1 {
+            if value == "L" && index > 0 && index < s.count - 1 {
                 let c1 = s.index(s.startIndex, offsetBy: index-1)
                 let c2 = s.index(s.startIndex, offsetBy: index+1)
                 if s[c1] == "L" && s[c2] == "L" {
@@ -275,13 +275,13 @@ func checkRecord(_ s: String) -> Bool {
 
 //MARK: 541. Reverse String II
 func reverseStr(_ s: String, _ k: Int) -> String {
-    let n = s.characters.count % k == 0 ? s.characters.count / k : s.characters.count / k + 1
+    let n = s.count % k == 0 ? s.count / k : s.count / k + 1
     var str = ""
     for i in 0..<n {
         let startIndex = s.index(s.startIndex, offsetBy: i * k)
         var endIndex: String.Index
-        if  i * k + k >= s.characters.count {
-            endIndex = s.index(s.startIndex, offsetBy: s.characters.count)
+        if  i * k + k >= s.count {
+            endIndex = s.index(s.startIndex, offsetBy: s.count)
         }else {
             endIndex = s.index(s.startIndex, offsetBy: i * k + k)
         }
@@ -301,7 +301,7 @@ func judgeCircle(_ moves: String) -> Bool {
     var dCount = 0
     var lCount = 0
     var rCount = 0
-    for s in moves.characters {
+    for s in moves {
         if s == "U" {
             uCount += 1
         }else if s == "D" {
@@ -351,15 +351,15 @@ func binaryTraverse(_ t: TreeNode?) -> String {
 // 521. Longest Uncommon Subsequence I
 func findLUSlength(_ a: String, _ b: String) -> Int {
     var arr: [Int] = []
-    if a.characters.count !=  b.characters.count {
-        return max(Int(a.characters.count), Int(b.characters.count))
+    if a.count !=  b.count {
+        return max(Int(a.count), Int(b.count))
     }
     
     
-    for (i, c1) in a.characters.enumerated() {
+    for (i, c1) in a.enumerated() {
         var count = 0
-        var tmpArr = Array(b.characters)
-        for j in i..<b.characters.count {
+        var tmpArr = Array(b)
+        for j in i..<b.count {
             let c2 = tmpArr[j]
             if c1 != c2 {
                 count += 1
@@ -421,13 +421,13 @@ public class ListNode {
     }
 }
 
-func insertionSortList(_ head: ListNode?) -> ListNode? {
-    var sorted = 0
-    var p = ListNode(0)
-    p.next = head.copy()
-    while head?.next != nil {
-        
-    }
-    return nil
-}
+//func insertionSortList(_ head: ListNode?) -> ListNode? {
+//    var sorted = 0
+//    var p = ListNode(0)
+//    p.next = head.copy()
+//    while head?.next != nil {
+//
+//    }
+//    return nil
+//}
 

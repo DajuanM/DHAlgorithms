@@ -286,11 +286,12 @@ func reverseStr(_ s: String, _ k: Int) -> String {
             endIndex = s.index(s.startIndex, offsetBy: i * k + k)
         }
         
-        var tmp = s[startIndex..<endIndex]
+        let tmp = s[startIndex..<endIndex]
         if i % 2 == 0 {
-            tmp = reverseStr(tmp)
+            str.append(reverseStr(String(tmp)))
+        }else {
+            str.append(String(tmp))
         }
-        str.append(tmp)
     }
     return str
 }

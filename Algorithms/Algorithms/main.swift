@@ -39,7 +39,7 @@ class Node {
     var next: Node?
 }
 
-
+// -
 func createHead(arr: [Int]) -> Node? {
     var head: Node?
     for i in arr {
